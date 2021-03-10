@@ -1,7 +1,7 @@
 """Module to create exe file."""
 from distutils.core import setup
 import py2exe
-import scrabble_randomiser
+import scrabbler
 
 console = [
     {

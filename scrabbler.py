@@ -12,6 +12,7 @@ def fetch_similar_words(word: str) -> [str]:
     start_char = word[0]
     word_len = len(word)
     found_word_list = []
+
     with open("corncob_lowercase.txt") as fp:
         for line in fp:
             # Remove unnecessary characters
@@ -34,12 +35,17 @@ def scrabble_sentence(sentence: str) -> str:
     :param sentence: The sentence to do a scrabble lookup on.
     :return: The scrabbled sentence.
     """
+    if not sentence.strip():
+        raise ValueError('word or sentence is empty of not valid!')
     # Break sentence into a word list
     word_list = sentence.split(' ')
     resultant_sentence = []
     for word in word_list:
-        # Send word to fetch_similar_words and get the lookup word list.
-        found_word_list = fetch_similar_words(word)
-        # Randomly select a word from the list
-        resultant_sentence.append(random.choice(found_word_list))
+        try:
+            # Send word to fetch_similar_words and get the lookup word list.
+            found_word_list = fetch_similar_words(word)
+            # Randomly select a word from the list
+            resultant_sentence.append(random.choice(found_word_list))
+        except KeyError:  # It's cheaper to except than using a if to validate.
+            resultant_sentence.append(word)
     return " ".join(resultant_sentence)

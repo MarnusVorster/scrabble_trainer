@@ -51,3 +51,7 @@ To create the executable do the following:
 + `pip install -r requirements_dev.txt`
 + `python setup.py py2exe`
 + This will create a folder with the name scrabble_trainer which will contain the scrabble_trainer.exe and it's required libraries.
+
+### Tests
+Run the tests by running the following:
++ `pytest tests.py` 
