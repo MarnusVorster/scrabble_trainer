@@ -10,16 +10,9 @@ The purpose of this tool is to do the following:
 + Download the latest zip file from releases.
 + Open and unzip it into **My Documents**
 + Download the word list from [here](http://www.mieliestronk.com/corncob_lowercase.txt) and place it in the same unzipped folder.
-+ Open cmd.exe (Just type 'cmd' in start menu)
-+ Type the following commands:  
-```
-cd My Documents
-cd scrabble_trainer
-```
-+ Then type the following to run the trainer:
-```
-scrabble_trainer.exe "your word or sentence"
-```
++ Right click on the `scrabble_trainer.bat` file and select edit.
++ Change the 'your sentence or words' to your words or sentence, then save.
++ Execute (double click) the `scrabble_trainer.bat` file. 
 + This will output the scrabbled sentence for you eg.
 ```
      Your sentence: lightly fried fish are delicious
