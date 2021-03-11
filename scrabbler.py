@@ -46,6 +46,6 @@ def scrabble_sentence(sentence: str) -> str:
             found_word_list = fetch_similar_words(word)
             # Randomly select a word from the list
             resultant_sentence.append(random.choice(found_word_list))
-        except KeyError:  # It's cheaper to except than using a if to validate.
+        except IndexError:  # It's cheaper to except than using a if to validate.
             resultant_sentence.append(word)
     return " ".join(resultant_sentence)
