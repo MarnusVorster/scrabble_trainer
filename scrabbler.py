@@ -36,7 +36,7 @@ def scrabble_sentence(sentence: str) -> str:
     :return: The scrabbled sentence.
     """
     if not sentence.strip():
-        raise ValueError('word or sentence is empty of not valid!')
+        raise ValueError('word or sentence is empty or not valid!')
     # Break sentence into a word list
     word_list = sentence.split(' ')
     resultant_sentence = []
