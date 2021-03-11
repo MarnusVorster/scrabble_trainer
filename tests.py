@@ -21,11 +21,11 @@ def test_fetch_similar_words():
 
 def test_empty_sentence():
     """Test that an exception is raised if an empty string is passed in."""
-    with raises(ValueError, match='word or sentence is empty of not valid!'):
+    with raises(ValueError, match='word or sentence is empty or not valid!'):
         scrabble_sentence('')
 
 
 def test_white_space():
     """Test that an exception is raised if a bunch of spaces is passed in."""
-    with raises(ValueError, match='word or sentence is empty of not valid!'):
+    with raises(ValueError, match='word or sentence is empty or not valid!'):
         scrabble_sentence('   ')
