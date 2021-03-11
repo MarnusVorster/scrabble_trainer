@@ -1,4 +1,4 @@
-"""Tool to scrabble your sentence and returns.
+"""Tool to scrabble your sentence.
 
 Usage:
 python main.py "your sentence"
